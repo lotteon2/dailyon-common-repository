@@ -1,6 +1,6 @@
 ext {
     PUBLISH_GROUP_ID = 'io.github.dailyon-maven'
-    PUBLISH_VERSION = '0.0.2'
+    PUBLISH_VERSION = '0.0.3'
     PUBLISH_ARTIFACT_ID = 'daily-on-common'
     PUBLISH_DESCRIPTION = 'common repository for daily-on project'
     PUBLISH_URL = 'https://github.com/lotteon2/dailyon-common-repository'
