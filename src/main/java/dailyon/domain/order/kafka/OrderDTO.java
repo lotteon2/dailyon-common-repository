@@ -20,6 +20,21 @@ public class OrderDTO {
   private Long memberId;
   private int usedPoints;
   private OrderEvent orderEvent;
+  private OrderType orderType;
+
+  @Getter
+  public enum OrderType {
+    SINGLE("단건주문"),
+    CART("장바구니주문"),
+    GIFT("선물하기"),
+    AUCTION("경매주문");
+
+    private final String message;
+
+    OrderType(String message) {
+      this.message = message;
+    }
+  }
 
   @Getter
   @NoArgsConstructor
