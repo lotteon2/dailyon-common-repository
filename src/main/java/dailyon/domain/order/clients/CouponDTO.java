@@ -24,6 +24,6 @@ public class CouponDTO {
     private String couponName;
     private Long couponInfoId;
     private Long minPurchaseAmount;
-    private Long maxDiscountAmount;
+    private long maxDiscountAmount;
   }
 }
