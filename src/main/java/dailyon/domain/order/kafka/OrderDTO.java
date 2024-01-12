@@ -21,6 +21,7 @@ public class OrderDTO {
   private int usedPoints;
   private OrderEvent orderEvent;
   private OrderType orderType;
+  private String referralCode;
 
   @Getter
   public enum OrderType {
