@@ -22,6 +22,7 @@ public class OrderDTO {
   private OrderEvent orderEvent;
   private OrderType orderType;
   private String referralCode;
+  private String auctionId;
 
   @Getter
   public enum OrderType {
