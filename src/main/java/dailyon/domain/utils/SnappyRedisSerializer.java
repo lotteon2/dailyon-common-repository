@@ -29,11 +29,15 @@ public class SnappyRedisSerializer<T> implements RedisSerializer<T> {
   @Override
   public T deserialize(byte[] bytes) throws SerializationException {
     try {
-      byte[] bos = Snappy.uncompress(bytes);
-      return (T)
-          (innerSerializer != null
-              ? innerSerializer.deserialize(bos)
-              : SerializationUtils.deserialize(bos));
+      if(bytes != null) {
+        byte[] bos = Snappy.uncompress(bytes);
+        return (T)
+                (innerSerializer != null
+                        ? innerSerializer.deserialize(bos)
+                        : SerializationUtils.deserialize(bos));
+      } else {
+        return null;
+      }
     } catch (Exception e) {
       throw new SerializationException(e.getMessage(), e);
     }
